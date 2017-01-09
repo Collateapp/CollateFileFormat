@@ -45,22 +45,64 @@ Here is an example file structure:
 
 ## Collection
 
-
+A Collection is any directory in the file system and may be located anywhere the user has access.  There are no naming conventions or restrictions.
 
 ## Notebooks
 
-
+Notebooks are directories and direct children of the Collection directory.  Notebook directory names may only contain alpha-numeric characters a-zA-Z0-9 and the hyphen `-` character. It must end in `.notebook`.  For example: `Moms-recipes.notebook` or `99-bottles-of-beer.notebook`.
 
 ## Notes
 
+Notes are directories and direct children of Notebooks.  Like Notebooks, directory names may only contain alpha-numeric characters a-zA-Z0-9 and the hyphen `-` character.  It must end in `.note`.  For example: `Holiday-shopping-list.note` or `10-places-to-visit.note`.
 
 ## Note Markdown Files
-
 ### Frontmatter
+Collate uses [YAML](http://yaml.org/) formatted front matter to store note metadata as inspired by [Jekyll](https://jekyllrb.com/docs/frontmatter/).  YAML offers a great readable way to store metadata for Notes.
 
+Collate's YAML frontmatter looks like:
+
+```
+---
+title: Anatomy of a Collate Note
+description: A Collate note is comprised of a markdown file and attachments.  So simple!
+tags:
+  - Collate
+	- Markdown
+	- YAML
+created: 2016-12-25 12:30:00
+modified: 2016-12-26 22:40:00
+---
+```
+
+Translated to JSON:
+
+```
+{
+	"title": "Anatomy of a Collate Note",
+	"description": "A Collate note is comprised of a markdown file and attachments.  So simple!",
+	"tags": ["Collate", "Markdown", "YAML"],
+	"created": "2016-12-25 12:30:00",
+	"modified": "2016-12-26 22:40:00"
+}
+```
+The only key that's required is the title, however its highly recommended that the created date is added as well.  The minimum format for the date fields is `YYYY-MM-DD` and the full format is `YYYY-MM-DD HH:MM:SS +/-TTTT`.
+
+Here's a table of keys:
+| Key         	| Required/Optional 	| Data Type 	|
+|-------------	|-------------------	|-----------	|
+| title       	| Required          	| String    	|
+| description 	| Optional          	| String    	|
+| tags        	| Optional          	| Array     	|
+| created     	| Required          	| String    	|
+| modified    	| Required          	| String    	|
+
+Other fields may also be added to the frontmatter and Collate may utilize it in the future for other features.
 
 ### Body
 
+The body text is in markdown format.  Collate will try to adhere to the [CommonMark Spec](http://commonmark.org/) as much as possible.
 
 
 ## Attachments
+
+The attachments folder may hold any type of file.  Collate will not open or parse these files except for the file name.  Any directories within this folder will be ignored, but this may change in the future.
