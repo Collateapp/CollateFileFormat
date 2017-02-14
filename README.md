@@ -82,6 +82,7 @@ Translated to JSON:
 The only key that's required is the title, however its highly recommended that the created date is added as well.  The minimum format for the date fields is `YYYY-MM-DD` and the full format is `YYYY-MM-DD HH:MM:SS +/-TTTT`.
 
 Here's a table of keys:
+
 | Key         	| Required/Optional 	| Data Type 	|
 |-------------	|-------------------	|-----------	|
 | title       	| Required          	| String    	|
