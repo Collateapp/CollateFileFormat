@@ -64,13 +64,10 @@ Collate's YAML frontmatter looks like:
 ```
 ---
 title: Anatomy of a Collate Note
-description: A Collate note is comprised of a markdown file and attachments.  So simple!
 tags:
   - Collate
-	- Markdown
-	- YAML
-created: 2016-12-25 12:30:00
-modified: 2016-12-26 22:40:00
+  - Markdown
+  - YAML
 ---
 ```
 
@@ -79,10 +76,7 @@ Translated to JSON:
 ```
 {
 	"title": "Anatomy of a Collate Note",
-	"description": "A Collate note is comprised of a markdown file and attachments.  So simple!",
 	"tags": ["Collate", "Markdown", "YAML"],
-	"created": "2016-12-25 12:30:00",
-	"modified": "2016-12-26 22:40:00"
 }
 ```
 The only key that's required is the title, however its highly recommended that the created date is added as well.  The minimum format for the date fields is `YYYY-MM-DD` and the full format is `YYYY-MM-DD HH:MM:SS +/-TTTT`.
@@ -91,10 +85,7 @@ Here's a table of keys:
 | Key         	| Required/Optional 	| Data Type 	|
 |-------------	|-------------------	|-----------	|
 | title       	| Required          	| String    	|
-| description 	| Optional          	| String    	|
 | tags        	| Optional          	| Array     	|
-| created     	| Required          	| String    	|
-| modified    	| Required          	| String    	|
 
 Other fields may also be added to the frontmatter and Collate may utilize it in the future for other features.
 
