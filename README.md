@@ -92,7 +92,9 @@ Other fields may also be added to the frontmatter and Collate may utilize it in 
 
 ### Body
 
-The body text is in markdown format.  Collate will try to adhere to the [CommonMark Spec](http://commonmark.org/) as much as possible.
+The body text is in markdown format.  
+~~Collate will try to adhere to the [CommonMark Spec](http://commonmark.org/) as much as possible.~~
+Collate will use [Github Flavored Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown), a superset of Markdown.
 
 
 ## Attachments
