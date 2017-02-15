@@ -1,7 +1,7 @@
 # Collate File Format
 The following document specifies Collate's file format.
 
-Collate's file format optimizes for readability and openness above all other attributes.  The goal is to have a human readable format which can be easily parsed and read without the aid of software.  This is important for long term archival purposes as well as removing anxiety about being "locked-in" to a developer's ecosystem.  There is a comfort in knowing that your data will be safe and available to you no matter what happens.
+Collate's file format optimizes for readability and openness above all other attributes.  The goal is to have a human readable format which can be easily parsed and read without the aid of software other than a file browser and text editor.  This is important for long term archival purposes as well as removing anxiety about being "locked-in" to a developer's ecosystem.  There is a comfort in knowing that your data will be safe and available to you no matter what happens.
 
 ## File structure
 
