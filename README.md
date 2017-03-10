@@ -68,6 +68,7 @@ tags:
   - Collate
   - Markdown
   - YAML
+type: markdown
 ---
 ```
 
@@ -77,24 +78,28 @@ Translated to JSON:
 {
 	"title": "Anatomy of a Collate Note",
 	"tags": ["Collate", "Markdown", "YAML"],
+	"type": "markdown"
 }
 ```
-The only key that's required is the title, however its highly recommended that the created date is added as well.  The minimum format for the date fields is `YYYY-MM-DD` and the full format is `YYYY-MM-DD HH:MM:SS +/-TTTT`.
+The only key that's required is the title.
 
 Here's a table of keys:
 
-| Key         	| Required/Optional 	| Data Type 	|
-|-------------	|-------------------	|-----------	|
-| title       	| Required          	| String    	|
-| tags        	| Optional          	| Array     	|
+| Key         	| Required/Optional 	| Data Type 	| Default Value	|
+|-------------	|-------------------	|-----------	|--------------	|
+| title       	| Required          	| String    	|		|
+| tags        	| Optional          	| Array     	| 		|
+| type		| Optional		| String	| markdown	|
 
 Other fields may also be added to the frontmatter and Collate may utilize it in the future for other features.
 
 ### Body
 
-The body text is in markdown format.  
+The default body text is in markdown format.  
 
 Collate will use [Github Flavored Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown), a superset of Markdown which includes [CommonMark](http://commonmark.org/).
+
+As of v. 0.2.3, Collate will be expanding the contents of the body to include other types of data in support of the upcoming Note Types feature. This feature trades rich text or other note editing capabilities on the front end of the application for a less readable but more flexible data format. Data types may include JSON, HTML, or additional types in the future.  Files that contain data other than markdown must be denoted in the front matter by using the type key.  
 
 
 ## Attachments
