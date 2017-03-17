@@ -69,6 +69,8 @@ tags:
   - Markdown
   - YAML
 type: markdown
+created: 2017-02-16T08:51:20.000Z
+modified: 2017-02-16T08:56:56.000Z
 ---
 ```
 
@@ -78,7 +80,9 @@ Translated to JSON:
 {
 	"title": "Anatomy of a Collate Note",
 	"tags": ["Collate", "Markdown", "YAML"],
-	"type": "markdown"
+	"type": "markdown",
+	"created": "2017-02-16T08:51:20.000Z",
+	"modified": "2017-02-16T08:56:56.000Z"
 }
 ```
 The only key that's required is the title.
@@ -90,6 +94,10 @@ Here's a table of keys:
 | title       	| Required          	| String    	|		|
 | tags        	| Optional          	| Array     	| 		|
 | type		| Optional		| String	| markdown	|
+| created	| Optional		| String	|		|
+| modified	| Optional		| String	|		|
+
+Created and Modified use ISO 8601 formatted strings. If not found, Collate defaults to system birthtime for created and mtime for modified.
 
 Other fields may also be added to the frontmatter and Collate may utilize it in the future for other features.
 
