@@ -35,12 +35,6 @@ A Notebook is any directory directly nested under the main Collection directory.
 
 _The naming convention was removed 4/27/2017._
 _Going forward, Collate will still read notes and notebooks with the old format and will not convert them. However, any new notes and notebooks will not be constrained._
-~~A Notebook is a directory with a `.notebook` suffix and is nested immediately under a Collection. They can only contain the characters `a-zA-Z0-9-` (alpha-numeric characters and the character "-").  Spaces are not allowed. It must end in `.notebook`.  For example: `Moms-recipes.notebook` or `99-bottles-of-beer.notebook`.~~
-
-~~Valid: `This-is-a-notebook-1234.notebook`
-Invalid: `This is a notebook.notebook`
-Invalid: `This_is_a_notebook.notebook`
-Invalid: `This-is-a-notebook!.notebook`~~
 
 A notebook is any directory immediately nested under the main Collection.
 
@@ -50,14 +44,12 @@ A note is any directory directly nested under a notebook and second child of the
 
 _The naming convention was removed 4/27/2017._
 _Going forward, Collate will still read notes and notebooks with the old format and will not convert them. However, any new notes and notebooks will not be constrained._
-~~Notes are directories and direct children of Notebooks.  Like Notebooks, directory names may only contain alpha-numeric characters a-zA-Z0-9 and the hyphen `-` character.  It must end in `.note`.  For example: `Holiday-shopping-list.note` or `10-places-to-visit.note`.~~
 
 ## Note Files
 
 A Note File is a markdown file with suffix `.md` which is nested immediately under a Note.
 
 _The naming convention was removed 4/27/2017._
-~~As convention, Collate names Note files the same as notes, just with a `.md` extension instead of `.note`.~~
 
 A note file has two parts, the frontmatter containing the machine readable metadata and the note body which contains the contents of the note.
 
